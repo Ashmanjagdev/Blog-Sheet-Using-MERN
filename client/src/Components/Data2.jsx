@@ -19,7 +19,7 @@ const Data2 = (props) => {
 		e.preventDefault();
 		const finish = user.finish;
 		
-		const res= await fetch("/delete",{
+		const res= await fetch("/delet",{
 		method: "POST",
 		headers: {
 		  "Content-Type" : "application/json"
@@ -39,9 +39,7 @@ const Data2 = (props) => {
      <h2>{ props.heading }</h2>
   <p>{ props.content }</p>
   <form  method="POST" >
-		  <button name="finish" value={ props._id } onSubmit={PostData} className="cross"><span className="inside">Delete</span></button>
-			  
-			<input  className="cross" value={ props._id } name="finish" type="submit"  onSubmit={PostData} / >
+		  <button name="finish" value={ props._id } onSubmit={PostData} className="cross"><span className="inside">Delete</span></button>	 
 		 
   </form>
   <b><p className="time">{ props.date }</p></b>
