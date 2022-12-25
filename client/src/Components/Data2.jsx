@@ -30,7 +30,7 @@ const Data2 = (props) => {
 		});
 		const data=await res.json();
       if(data===101){
-        navigate("/compose");
+        navigate(0);
       }
 		
 	
@@ -40,8 +40,8 @@ const Data2 = (props) => {
     <div className="items"  >
      <h2>{ props.heading }</h2>
   <p>{ props.content }</p>
-  <form  method="POST" >
-		  <button name="finish" value={ props._id } onSubmit={PostData} className="cross"><span className="inside">Delete</span></button>	 
+  <form  method="POST" onSubmit={PostData}>
+		  <button name="finish" value={ props._id } onMouseEnter={PostData} className="cross"><span className="inside">Delete</span></button>	 
 		 
   </form>
   <b><p className="time">{ props.date }</p></b>
