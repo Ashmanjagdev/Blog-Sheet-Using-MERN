@@ -19,7 +19,7 @@ const Data2 = (props) => {
 		e.preventDefault();
 		const finish = user.finish;
 		
-		const res= await fetch("/delet",{
+		const res= await fetch("/delete",{
 		method: "POST",
 		headers: {
 		  "Content-Type" : "application/json"
@@ -29,7 +29,7 @@ const Data2 = (props) => {
 		})
 		});
 		const data=res.json();
-		navigate(0);
+		navigate("/");
 		
 	
 	  }
