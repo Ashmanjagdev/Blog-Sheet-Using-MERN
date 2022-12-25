@@ -28,7 +28,6 @@ const Data2 = (props) => {
 		  finish
 		})
 		});
-		const data=res.json();
 		navigate("/");
 		
 	
