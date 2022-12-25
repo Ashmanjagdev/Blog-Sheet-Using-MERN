@@ -12,8 +12,8 @@ const Data2 = (props) => {
 	
 	  
 	  const PostData = async (e) =>{
-		  name= e.target.name;
-	          value = e.target.value;
+		  name= await e.target.name;
+	          value = await e.target.value;
 	
 	          setUser({[name]:value});
 		e.preventDefault();
