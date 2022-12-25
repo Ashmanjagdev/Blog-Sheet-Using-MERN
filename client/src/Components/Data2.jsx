@@ -10,14 +10,12 @@ const Data2 = (props) => {
 	
 	  let name, value;
 	
-	  const handleInputs = (e) => {
-	  name= e.target.name;
-	  value = e.target.value;
-	
-	  setUser({[name]:value});
-	  }
-	
+	  
 	  const PostData = async (e) =>{
+		  name= e.target.name;
+	          value = e.target.value;
+	
+	          setUser({[name]:value});
 		e.preventDefault();
 		const finish = user.finish;
 		
@@ -40,10 +38,8 @@ const Data2 = (props) => {
     <div className="items"  >
      <h2>{ props.heading }</h2>
   <p>{ props.content }</p>
-  <form  method="POST" onSubmit={PostData}>
-	    <div className="cross">
-			<input  className="inside"  type="submit"  value={ props._id } onClick={handleInputs} / >
-		  </div>
+  <form  method="POST" >
+		  <button name="finish" value={ props._id } onClick={PostData} className="cross"><span className="inside">Delete</span></button>
   </form>
   <b><p className="time">{ props.date }</p></b>
   </div>
