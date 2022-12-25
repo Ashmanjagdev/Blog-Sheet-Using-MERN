@@ -30,7 +30,6 @@ const Data2 = (props) => {
 		});
 		const data=await res.json();
       if(data===101){
-        setUser({headings:"",input:""});
         navigate("/compose");
       }
 		
