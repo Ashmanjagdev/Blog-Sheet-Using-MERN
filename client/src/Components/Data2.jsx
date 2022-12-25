@@ -28,7 +28,11 @@ const Data2 = (props) => {
 		  finish
 		})
 		});
-		navigate("/");
+		const data=await res.json();
+      if(data===101){
+        setUser({headings:"",input:""});
+        navigate("/compose");
+      }
 		
 	
 	  }
