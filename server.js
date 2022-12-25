@@ -59,7 +59,7 @@ app.post("/compose",function(req,res)
   res.send("101");
 });
 
-app.post("/delete",function(req,res)
+app.post("/delet",function(req,res)
 {
   const id=req.body.finish;
   Blog.findByIdAndRemove(id,function(err){
