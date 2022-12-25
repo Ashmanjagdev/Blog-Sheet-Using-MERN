@@ -39,7 +39,7 @@ const Data2 = (props) => {
      <h2>{ props.heading }</h2>
   <p>{ props.content }</p>
   <form  method="POST" >
-		  <button name="finish" value={ props._id } onClick={PostData} className="cross"><span className="inside">Delete</span></button>
+		  <button name="finish" value={ props._id } onSubmit={PostData} className="cross"><span className="inside">Delete</span></button>
 			  
 			<input  className="cross" value={ props._id } name="finish" type="submit"  onSubmit={PostData} / >
 		 
