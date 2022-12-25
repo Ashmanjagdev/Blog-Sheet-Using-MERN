@@ -44,7 +44,7 @@ const Data2 = (props) => {
   </form>
   <b><p className="time">{ props.date }</p></b>
   </div>
-    </>
+    </> 
   )
 }
 export default Data2;
