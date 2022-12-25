@@ -65,6 +65,7 @@ app.post("/delete",function(req,res)
   Blog.findByIdAndRemove(id,function(err){
     if(!err)
     {
+      res.send("101");
   }
   else {
   }
